@@ -14,6 +14,7 @@ if __name__ == "__main__":
 
     try:
         t = sys.argv[1]
+	t >= 0
     except:
         t = 1
 
