@@ -1,6 +1,10 @@
 # Question 3: fix the problem with this script
 # Question 3 extra credit: How else might this fail?
 
+# Name changed from time.py to times.py so as not to conflict with
+# time module if being run in ipython, bpython, etc. 
+# sys.argv[1] is a string, and needed to be made to a float.
+ 
 import sys
 import time
 
@@ -13,8 +17,7 @@ def main(t):
 if __name__ == "__main__":
 
     try:
-        t = sys.argv[1]
-	t >= 0
+        t = float(sys.argv[1])
     except:
         t = 1
 
