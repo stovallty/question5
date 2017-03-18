@@ -4,11 +4,7 @@
 import os
 
 start_here = '/usr'
-loop = 0
-for root, dirs, files in os.walk(start_here):
-    loop += 1
-    print(loop)
-    print('Root is:  %s' % root)
 
-    if loop >= 20:
-        break
+for root, dirs, files in os.walk(start_here):
+    if root.find('/l') != -1:
+        print('Root is:  %s' %root)
